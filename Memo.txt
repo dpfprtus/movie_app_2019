@@ -31,3 +31,14 @@ Component Updating
 2. componentDidUpdate
 
 Unmount - page나갈 때 
+
+<axios>
+fetch위에서 작동하는 작은 layer
+
+<오류에 봉착>
+1. Movie컴포넌트에서 여러 인자를 받아서 하나만 사용할때 구조할당분해를 써서 {}로 감싸줘야하는데 이걸 놓침..
+
+2.키가 필요하다는 오류. movie컴포넌트로 id,summary등 인자보낼때 key인자도 보내야한다. -> 구분이 가능해야 
+
+3.Warning: Invalid DOM property `class`. Did you mean `className`?
+react가 jsx문법안에서의 class와 컴포넌트class랑 헷갈려한다. 따라서 jsx안에서의 class를 className으로 바꿔준다
