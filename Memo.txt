@@ -1,5 +1,33 @@
 React는 component로 구성되어있다.
+
 - component: HTML을 반환하는 함수.\
+
 - Jsx: HTML IN JS,컴포넌트를 만들고 어떻게 사용하는지에 대한 것.
+
 - React는 한번에 하나의 컴포넌트만 렌더링 할 수 있다.->이제 수정되서 두개 컴포넌트를 렌더링 할 수 있다.
 - prpos:컴포넌트에 넣는 함수 인자같은것.
+
+- react component가 내부적으로 key프로퍼티를 필요로 한다.
+
+- prop-types:전달하는 props을 검증한다.
+
+- React는 자동적으로 모든 class component(State)의 render method를 실행하고자 한다.
+
+- state:오브젝트이다. 가변하는 데이터를 다룬다.
+
+- 리액트는 랜더펑션을 리프레쉬하지 않는다. -> state를 변경하기 위해서는 render function을 호출해서 바꿔주어야 한다. 따라서 setState로 state를 refresh해준다.
+SPA라서 변화가 있는 부분만 랜더링한다. **setState가 왜필요한지 이해.
+--> setState를 호출할 때마다 react는 새로운 state와 함께 render function을 호출할 것이다.
+
+Component Mounting
+호출되는 함수 순서.
+1.component 가 화면에 mount될 때 constructor를 호출한다.
+2. 그후 render한다.
+3. componentDidMount
+
+Component Updating
+호출되는 함수 순서.
+1. render
+2. componentDidUpdate
+
+Unmount - page나갈 때 

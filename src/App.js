@@ -1,20 +1,24 @@
 import React from 'react';
-function Food({name,b}){
-	console.log({name});
-	return <div>
-	<h2>I Like {name}</h2>
-		<h2>you {b}</h2>
-	</div>
-}
+import axios from 'axios';
+//import PropTypes from "prop-types";
 
-const foodILike = [{a:"12",b:"abc"},{a:"23",b:"abcd"}]
-
-function App(){
+class App extends React.Component{
+	state = {
+		isLoading: true
+	};
 	
-	return <div className="App">
-		{foodILike.map(dish => <Food name={dish.a} b={dish.b}/>)}
+	getMovies = async()=> {
+		// eslint-disable-next-line
+		const movies = await  axios.get("https://yts.mx/api/v2/list_movies.json");
+	}
+	async componentDidMount(){
+  
+    	this.getMovies();
+	};
 	
-	</div>; 
-}
-
+	render(){
+		const { isLoading} = this.state;
+		return <div>{isLoading ? "isLoading" : "We r ready."}</div>;
+	}
+		}
 export default App;
