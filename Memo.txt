@@ -42,3 +42,13 @@ fetch위에서 작동하는 작은 layer
 
 3.Warning: Invalid DOM property `class`. Did you mean `className`?
 react가 jsx문법안에서의 class와 컴포넌트class랑 헷갈려한다. 따라서 jsx안에서의 class를 className으로 바꿔준다
+
+<배포>
+gh-pages를 통한 깃헙.io배포.
+대문자가 주소창에 들어가면 안댐
+스크립트를 만들어준다
+1. deploy:"gh-pages -d build"
+2. predeploy:"npm run build" -> deploy가 실행되기전에 실행된다.
+
+<마무리>
+1. state를 갖기 위해 class component를 가질 필요는 없다(new react) -> React Hook덕분에... 대체자 이 둘을 일을 하는 다른 방식인것.
