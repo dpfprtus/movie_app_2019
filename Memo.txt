@@ -51,4 +51,8 @@ gh-pages를 통한 깃헙.io배포.
 2. predeploy:"npm run build" -> deploy가 실행되기전에 실행된다.
 
 <마무리>
-1. state를 갖기 위해 class component를 가질 필요는 없다(new react) -> React Hook덕분에... 대체자 이 둘을 일을 하는 다른 방식인것.
+1. state를 갖기 위해 class component를 가질 필요는 없다(new react) -> React Hook덕분에... 대체자 이 둘을 일을 하는 다른 방식인것. 
+<Route>
+-리액트 라우트는 기본적으로 url을 가져와 비교한다.
+따라서 url이 /home/a라고 한다면
+/home과 /home/a가 매치된다. 따라서 이렇게 여러게의 컴포넌트를 가져오는걸 방지하려면 exact={true}를 쓰면된다.
